@@ -4,8 +4,13 @@ const userSchema = new Schema({
   username: String,
   password: String,
   email: String,
+  fullName: String,
   createAt: String,
-  selectedFile: String,
+  selectedFile: {
+    type: String,
+    default:
+      "https://www.umass.edu/philosophy/sites/default/files/store/img/cfm/user_14.png",
+  },
 });
 
 const user = model("User", userSchema);
