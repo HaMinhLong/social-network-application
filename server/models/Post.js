@@ -6,18 +6,18 @@ const postSchema = new Schema({
   selectedFile: String,
   tags: [String],
   username: String,
-  createAt: String,
+  createdAt: String,
   comments: [
     {
       body: String,
       username: String,
-      createAt: String,
+      createdAt: String,
     },
   ],
   likes: [
     {
       username: String,
-      createAt: String,
+      createdAt: String,
     },
   ],
   user: {

@@ -6,8 +6,8 @@ module.exports = gql`
     title: String!
     content: String!
     tags: [String!]
+    createdAt: String!
     selectedFile: String!
-    createAt: String!
     username: String!
   }
   type User {
