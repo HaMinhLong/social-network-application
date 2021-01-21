@@ -5,7 +5,7 @@ const userSchema = new Schema({
   password: String,
   email: String,
   fullName: String,
-  createAt: String,
+  createdAt: String,
   selectedFile: {
     type: String,
     default:
