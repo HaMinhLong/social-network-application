@@ -13,7 +13,6 @@ body {
   /* box-sizing: border-box; */
   scroll-behavior: smooth;
 }
-
 /* HEADER */
 header {
   font-family: "Lobster Two", cursive;
@@ -37,6 +36,221 @@ header a {
   font-size: 24px;
 }
 
+/* POSTS CONTAINER  */
+.posts-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0px 50px;
+  width: 100%;
+  min-height: 100vh;
+}
+.posts {
+  max-width: 600px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.post {
+  border: 1px solid #c0c0c0;
+  margin: 60px 0px;
+  width: 100%;
+  /* min-height: 600px; */
+  border-radius: 10px;
+}
+.creator {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+.post .creator {
+  position: relative;
+  padding: 0px 10px 0px;
+  width: 100%;
+}
+.creator img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.creator p {
+  margin-left: 20px;
+  margin-top: 7px;
+  font-weight: 600;
+}
+.creator {
+  font-weight: 700;
+}
+.post .post-details {
+  width: 100%;
+  /* min-height: 500px; */
+}
+.post .post-details img {
+  width: 100%;
+  height: 400px;
+}
+.post .post-details .content {
+  padding: 5px 20px;
+  /* min-height: 200px; */
+}
+.post .post-details .content p:nth-child(1) {
+  letter-spacing: 2px;
+}
+.post .comment {
+  border-top: 1px solid #c0c0c0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-items: center;
+  justify-content: flex-start;
+  padding: 5px 20px;
+}
+.post .comment input {
+  width: 85%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+.post .comment button {
+  width: 10%;
+  border: none;
+  background: transparent;
+  color: darkcyan;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.post .comment button:hover {
+  font-weight: 700;
+  font-size: 18px;
+}
+#post-date {
+  margin: 0px 20px 10px;
+  font-size: 11px;
+  font-style: italic;
+  color: gray;
+  top: 20px;
+  left: 45px;
+}
+#username {
+  font-weight: 600;
+  margin-right: 5px;
+}
+#tags {
+  color: darkcyan;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 500;
+}
+.more {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.more:hover {
+  letter-spacing: 2px;
+}
+
+/* UPDATE POST */
+#select-button {
+  position: absolute;
+  right: 15px;
+  height: 25px;
+  width: 50px;
+  background: transparent;
+}
+#button {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  height: 4px;
+  width: 4px;
+  background: rgb(38, 38, 38);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#button::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  height: 4px;
+  width: 4px;
+  background: rgb(38, 38, 38);
+  border-radius: 50%;
+}
+#button::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  height: 4px;
+  width: 4px;
+  background: rgb(38, 38, 38);
+  border-radius: 50%;
+}
+#select-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+#select-box p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#select-box p:hover:nth-child(1) {
+  color: darkcyan;
+}
+#select-box p:hover:nth-child(2) {
+  color: darkred;
+}
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(38, 38, 38, 0.2);
+  z-index: 500;
+}
+
+/* LIKE POST */
+.like-post {
+  padding: 0px 20px;
+}
+.like-post ul {
+  display: flex;
+}
+.like-post li {
+  list-style: none;
+  font-size: 25px;
+  padding: 0px 20px 0px 0px;
+}
+.like-post p {
+  font-weight: 600;
+  font-size: 13px;
+}
+
 /* FOOTER */
 footer {
   position: fixed;
@@ -46,6 +260,7 @@ footer {
   border-top: 1px solid #c0c0c0;
   bottom: 0;
   left: 0;
+  z-index: 1000;
 }
 footer div {
   height: 100%;
