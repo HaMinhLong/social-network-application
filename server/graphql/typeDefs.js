@@ -6,38 +6,37 @@ module.exports = gql`
     title: String!
     content: String!
     tags: [String]!
-    comments: [Comment]!
-    likes: [Like]!
-    createdAt: String!
     selectedFile: String!
     username: String!
+    createdAt: String!
+    comments: [Comment]!
+    likes: [Like]!
+    likeCount: Int!
+    commentCount: Int!
   }
   type User {
     id: ID!
     email: String!
-    username: String!
-    fullName: String!
     token: String!
+    username: String!
     createdAt: String!
-    # selectedFile: String!
   }
   type Comment {
     id: ID!
+    createdAt: String!
     username: String!
     body: String!
-    createdAt: String!
   }
   type Like {
     id: ID!
-    username: String!
     createdAt: String!
+    username: String!
   }
   input RegisterInput {
-    email: String!
-    fullName: String!
     username: String!
     password: String!
     confirmPassword: String!
+    email: String!
   }
   type Query {
     getPosts: [Post]
@@ -49,7 +48,7 @@ module.exports = gql`
     createPost(
       title: String!
       content: String!
-      tags: [String!]
+      tags: String!
       selectedFile: String!
     ): Post!
     deletePost(postId: ID!): String!
