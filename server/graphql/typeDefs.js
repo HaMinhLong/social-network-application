@@ -17,9 +17,12 @@ module.exports = gql`
   type User {
     id: ID!
     email: String!
-    token: String!
+
+    fullName: String!
     username: String!
     createdAt: String!
+    token: String!
+
   }
   type Comment {
     id: ID!
