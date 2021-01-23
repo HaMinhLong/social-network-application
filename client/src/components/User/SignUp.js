@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+
+import React, { useState, useContext } from "react";
+
 import { Link } from "react-router-dom";
 import { SIGN_UP_USER } from "../util/graphql";
 
 import { useMutation } from "@apollo/client";
 import { useForm } from "../util/hooks";
 
+
+import { AuthContext } from "../context/auth";
+
 const SignUp = (props) => {
+  const context = useContext(AuthContext);
+
   const [errors, setErrors] = useState({});
 
   const { onChange, onSubmit, values } = useForm(registerUser, {
@@ -16,7 +23,11 @@ const SignUp = (props) => {
     confirmPassword: "",
   });
   const [addUser, { loading }] = useMutation(SIGN_UP_USER, {
-    update(_, result) {
+
+    update(_, { data: { register: userData } }) {
+      context.login(userData);
+
+
       props.history.push("/");
     },
     onError(err) {

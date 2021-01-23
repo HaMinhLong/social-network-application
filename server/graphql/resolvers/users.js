@@ -87,6 +87,8 @@ module.exports = {
         fullName,
         username,
         password,
+        selectedFile:
+          "https://www.flaticon.com/svg/vstatic/svg/848/848043.svg?token=exp=1611417166~hmac=5d6788ae7572966de532c33c0b1a83a3",
         createdAt: new Date().toISOString(),
       });
 

@@ -9,10 +9,12 @@ const Post = (props) => {
     <div className="post">
       <div className="creator">
         <img
-          src="https://khoahocphattrien.vn/Images/Uploaded/Share/2016/12/20/Nhung-buc-anh-dep-nhat-2016-chia-se-tren-Flickr_4.jpg"
+
+          src="https://www.flaticon.com/svg/vstatic/svg/848/848043.svg?token=exp=1611417166~hmac=5d6788ae7572966de532c33c0b1a83a3"
           alt=""
         />
-        <p>Creator</p>
+        <p>{props.post.username}</p>
+
         <div
           id="select-button"
           onClick={() => setCheckSelectButton(!checkSelectButton)}

@@ -23,6 +23,8 @@ module.exports = gql`
     createdAt: String!
     token: String!
 
+    selectedFile: String!
+
   }
   type Comment {
     id: ID!

@@ -10,22 +10,27 @@ import Posts from "./components/Posts/Posts";
 import CreatePost from "./components/Posts/Post/CreatePost";
 import Profile from "./components/User/Profile";
 
+import { AuthProvider } from "./components/context/auth";
+import AuthRoute from "./components/util/AuthRoute";
+
 function App() {
   return (
     <div>
-      <Router>
-        <Header />
-        <Route exact path="/" component={Posts} />
-        <Route exact path="/create-post" component={CreatePost} />
-        <Route exact path="/profile" component={Profile} />
 
-        <Route exact path="/sign-up" component={SignUp} />
+      <AuthProvider>
+        <Router>
+          <AuthRoute path="/" component={Header} />
+          <AuthRoute exact path="/" component={Posts} />
+          <AuthRoute exact path="/create-post" component={CreatePost} />
+          <AuthRoute exact path="/profile" component={Profile} />
+          <Route exact path="/sign-up" component={SignUp} />
+          <Route exact path="/login" component={Login} />
+          <AuthRoute path="/" component={Footer} />
+        </Router>
+      </AuthProvider>
 
-        <Route exact path="/login" component={Login} />
-        <Footer />
-      </Router>
     </div>
   );
 }
 
-export default App;
+export default App
