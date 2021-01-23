@@ -20,7 +20,7 @@ const Footer = () => {
         <Link to="/profile">
           <img
             src="https://www.flaticon.com/svg/vstatic/svg/64/64572.svg?token=exp=1611248080~hmac=43a990f8407e6e9a30d91bcfbe9547a7"
-            alt="profile picture"
+            alt=""
             width="24"
             height="24"
           />
