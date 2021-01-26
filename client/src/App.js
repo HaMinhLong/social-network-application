@@ -16,6 +16,7 @@ import AuthRoute from "./components/util/AuthRoute";
 function App() {
   return (
     <div>
+
       <AuthProvider>
         <Router>
           <AuthRoute path="/" component={Header} />
@@ -31,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
