@@ -16,7 +16,6 @@ import AuthRoute from "./components/util/AuthRoute";
 function App() {
   return (
     <div>
-
       <AuthProvider>
         <Router>
           <AuthRoute path="/" component={Header} />

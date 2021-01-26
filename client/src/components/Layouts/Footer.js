@@ -23,7 +23,6 @@ const Footer = () => {
             width="24px"
             height="24px"
             alt=""
-
           />
         </Link>
       </div>

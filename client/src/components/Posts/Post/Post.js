@@ -1,9 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import moment from "moment";
 
+import { AuthContext } from "../../context/auth";
+import { useMutation } from "@apollo/client";
+import { LIKE_POST } from "../../util/graphql";
+
 const Post = (props) => {
+  const { user } = useContext(AuthContext);
   const [checkText, setCheckText] = useState(false);
   const [checkSelectButton, setCheckSelectButton] = useState(false);
+
+  const [liked, setLiked] = useState(false);
+
+  useEffect(() => {
+    if (
+      user &&
+      props.post.likes.find((like) => like.username === user.username)
+    ) {
+      setLiked(true);
+    } else {
+      setLiked(false);
+    }
+  }, [user, props.post.likes]);
+
+  const [likePost] = useMutation(LIKE_POST, {
+    variables: { postId: props.post.id },
+  });
+
+  const likeButtonColor = user ? (liked ? "red" : "black") : "black";
 
   return (
     <div className="post">
@@ -13,12 +37,14 @@ const Post = (props) => {
           alt=""
         />
         <p>{props.post.username}</p>
-        <div
-          id="select-button"
-          onClick={() => setCheckSelectButton(!checkSelectButton)}
-        >
-          <div id="button"></div>
-        </div>
+        {user && user.username === props.post.username && (
+          <div
+            id="select-button"
+            onClick={() => setCheckSelectButton(!checkSelectButton)}
+          >
+            <div id="button"></div>
+          </div>
+        )}
       </div>
       {checkSelectButton && (
         <div id="select-box">
@@ -32,10 +58,10 @@ const Post = (props) => {
         <img src={props.post.selectedFile} alt={props.post.title} />
         <div className="like-post">
           <ul>
-            <li>
+            <li onClick={likePost}>
               <svg
                 aria-label="Like"
-                fill="#262626"
+                fill={likeButtonColor}
                 height="24"
                 viewBox="0 0 48 48"
                 width="24"

@@ -20,7 +20,7 @@ const CreatePost = () => {
     tags: "",
     selectedFile: "",
   });
-  const [createPost, { error, loading }] = useMutation(CREATE_POST, {
+  const [createPost, { loading }] = useMutation(CREATE_POST, {
     variables: values,
     update(_, result) {
       values.title = "";

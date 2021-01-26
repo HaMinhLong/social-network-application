@@ -38,7 +38,6 @@ header a {
   font-size: 40px;
   font-weight: 400;
 }
-
 #logout {
   cursor: pointer;
 }
@@ -58,9 +57,7 @@ header a {
   flex-direction: column;
 }
 .post {
-
   position: relative;
-
   border: 1px solid #c0c0c0;
   margin: 60px 0px;
   width: 100%;
@@ -576,9 +573,7 @@ header a {
   right: 15px;
   height: 25px;
   width: 50px;
-
   cursor: pointer;
-
   background: transparent;
 }
 #button {
