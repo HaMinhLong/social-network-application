@@ -1,6 +1,4 @@
-
 import React, { useState, useContext } from "react";
-
 import { Link } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
@@ -8,12 +6,10 @@ import { useForm } from "../util/hooks";
 
 import { LOGIN_USER } from "../util/graphql";
 
-
 import { AuthContext } from "../context/auth";
 
 const Login = (props) => {
   const context = useContext(AuthContext);
-
   const [errors, setErrors] = useState({});
 
   const { onChange, onSubmit, values } = useForm(loginUserCallback, {
@@ -22,10 +18,8 @@ const Login = (props) => {
   });
 
   const [loginUser, { loading }] = useMutation(LOGIN_USER, {
-
     update(_, { data: { login: userData } }) {
       context.login(userData);
-
 
       props.history.push("/");
     },

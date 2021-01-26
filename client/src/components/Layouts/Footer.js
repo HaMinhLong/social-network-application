@@ -19,10 +19,11 @@ const Footer = () => {
         </Link>
         <Link to="/profile">
           <img
-            src="https://www.flaticon.com/svg/vstatic/svg/64/64572.svg?token=exp=1611248080~hmac=43a990f8407e6e9a30d91bcfbe9547a7"
+            src="https://www.flaticon.com/svg/vstatic/svg/848/848043.svg?token=exp=1611626357~hmac=f5f7d3a4c2aefe76ed3e4fee15d4937a"
+            width="24px"
+            height="24px"
             alt=""
-            width="24"
-            height="24"
+
           />
         </Link>
       </div>

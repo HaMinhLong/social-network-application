@@ -17,14 +17,11 @@ module.exports = gql`
   type User {
     id: ID!
     email: String!
-
     fullName: String!
     username: String!
     createdAt: String!
     token: String!
-
     selectedFile: String!
-
   }
   type Comment {
     id: ID!
@@ -53,7 +50,7 @@ module.exports = gql`
     createPost(
       title: String!
       content: String!
-      tags: String!
+      tags: [String]!
       selectedFile: String!
     ): Post!
     deletePost(postId: ID!): String!

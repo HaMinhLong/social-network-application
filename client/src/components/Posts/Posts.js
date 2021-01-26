@@ -1,4 +1,3 @@
-
 import React, { useContext } from "react";
 
 import { useQuery } from "@apollo/client";
@@ -10,9 +9,7 @@ import Post from "./Post/Post";
 import { AuthContext } from "../context/auth";
 
 const Posts = () => {
-
   const { user } = useContext(AuthContext);
-
   const { loading, data } = useQuery(FETCH_POSTS_QUERY);
 
   return (
@@ -24,9 +21,7 @@ const Posts = () => {
           data.getPosts &&
           data.getPosts.map((post) => (
             <div key={post.id} style={{ marginBottom: 20 }}>
-
               <Post post={post} user={user} />
-
             </div>
           ))
         )}

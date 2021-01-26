@@ -6,11 +6,7 @@ const userSchema = new Schema({
   email: String,
   fullName: String,
   createdAt: String,
-  selectedFile: {
-    type: String,
-    default:
-      "https://www.umass.edu/philosophy/sites/default/files/store/img/cfm/user_14.png",
-  },
+  selectedFile: String,
 });
 
 module.exports = model("User", userSchema);

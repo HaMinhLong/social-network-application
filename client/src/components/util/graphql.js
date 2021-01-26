@@ -25,7 +25,6 @@ export const FETCH_POSTS_QUERY = gql`
   }
 `;
 
-
 export const LOGIN_USER = gql`
   mutation login($username: String!, $password: String!) {
     login(username: $username, password: $password) {
@@ -62,6 +61,42 @@ export const SIGN_UP_USER = gql`
       username
       createdAt
       token
+    }
+  }
+`;
+
+export const CREATE_POST = gql`
+  mutation createPost(
+    $title: String!
+    $content: String!
+    $tags: [String]!
+    $selectedFile: String!
+  ) {
+    createPost(
+      title: $title
+      content: $content
+      tags: $tags
+      selectedFile: $selectedFile
+    ) {
+      id
+      title
+      content
+      tags
+      selectedFile
+      username
+      likes {
+        id
+        username
+        createdAt
+      }
+      likeCount
+      comments {
+        id
+        body
+        username
+        createdAt
+      }
+      commentCount
     }
   }
 `;

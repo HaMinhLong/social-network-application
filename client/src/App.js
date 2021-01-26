@@ -28,7 +28,6 @@ function App() {
           <AuthRoute path="/" component={Footer} />
         </Router>
       </AuthProvider>
-
     </div>
   );
 }

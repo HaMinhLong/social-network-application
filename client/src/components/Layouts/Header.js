@@ -24,7 +24,7 @@ const Header = () => {
           </svg>
         </Link> */}
         <img
-          src="https://www.flaticon.com/svg/vstatic/svg/3596/3596141.svg?token=exp=1611420664~hmac=96688492bbae3d70141088c2a212ff33"
+          src="https://www.flaticon.com/premium-icon/icons/svg/2595/2595200.svg"
           alt=""
           width="32px"
           height="25px"
