@@ -26,7 +26,11 @@ module.exports = {
     },
   },
   Mutation: {
-    async createPost(_, { title, content, tags, selectedFile }, context) {
+    async createPost(
+      _,
+      { createPostInput: { title, content, tags, selectedFile } },
+      context
+    ) {
       const user = checkAuth(context);
 
       const newPost = new Post({
