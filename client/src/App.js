@@ -1,5 +1,6 @@
-import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import "./App.css";
 
 import Header from "./components/Layouts/Header";
 import Footer from "./components/Layouts/Footer";
@@ -8,19 +9,26 @@ import Login from "./components/User/Login";
 import Posts from "./components/Posts/Posts";
 import CreatePost from "./components/Posts/Post/CreatePost";
 import Profile from "./components/User/Profile";
+import SinglePost from "./components/Posts/Post/SinglePost";
+
+import { AuthProvider } from "./components/context/auth";
+import AuthRoute from "./components/util/AuthRoute";
 
 function App() {
   return (
     <div>
-      <Router>
-        <Header />
-        <Route path="/" exact component={Posts} />
-        <Route path="/create-post" component={CreatePost} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/signup" component={SignUp} />
-        <Route path="/login" component={Login} />
-        <Footer />
-      </Router>
+      <AuthProvider>
+        <Router>
+          <AuthRoute path="/" component={Header} />
+          <AuthRoute exact path="/posts/:postId" component={SinglePost} />
+          <AuthRoute exact path="/" component={Posts} />
+          <AuthRoute exact path="/create-post" component={CreatePost} />
+          <AuthRoute exact path="/profile" component={Profile} />
+          <Route exact path="/sign-up" component={SignUp} />
+          <Route exact path="/login" component={Login} />
+          <AuthRoute path="/" component={Footer} />
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

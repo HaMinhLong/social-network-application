@@ -3,8 +3,8 @@ const { model, Schema } = require("mongoose");
 const postSchema = new Schema({
   title: String,
   content: String,
-  selectedFile: String,
   tags: [String],
+  selectedFile: String,
   username: String,
   createdAt: String,
   comments: [
@@ -26,6 +26,4 @@ const postSchema = new Schema({
   },
 });
 
-const Post = model("Post", postSchema);
-
-module.exports = Post;
+module.exports = model("Post", postSchema);
