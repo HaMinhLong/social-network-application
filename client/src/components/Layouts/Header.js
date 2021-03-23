@@ -25,7 +25,9 @@ const Header = () => {
         </Link> */}
         <img
           src="https://www.flaticon.com/premium-icon/icons/svg/2595/2595200.svg"
-          alt=""
+
+          alt="exit"
+
           width="32px"
           height="25px"
           onClick={logout}

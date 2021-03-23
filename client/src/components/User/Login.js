@@ -100,30 +100,109 @@ const Login = (props) => {
           <div className="get-app">
             <p>Get the app.</p>
             <div>
-              <img
-                src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"
-                alt=""
-              />
-              <img
-                src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png"
-                alt=""
-              />
+
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://apps.apple.com/app/instagram/id389801252?vt=lo"
+              >
+                <img
+                  src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"
+                  alt=""
+                />
+              </a>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DE3FA050E-ADCF-439C-BEE2-69969DB7B0DE%26utm_content%3Dlo%26utm_medium%3Dbadge"
+              >
+                <img
+                  src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png"
+                  alt=""
+                />
+              </a>
+
             </div>
           </div>
         </div>
       </div>
       <div id="footer-login">
         <div className="footer-first">
-          <Link to="/login">About</Link>
-          <Link to="/login">Blog</Link>
-          <Link to="/login">Jobs</Link>
-          <Link to="/login">Help</Link>
-          <Link to="/login">API</Link>
-          <Link to="/login">Privacy</Link>
-          <Link to="/login">Terms</Link>
-          <Link to="/login">Top Accounts</Link>
-          <Link to="/login">Hashtags</Link>
-          <Link to="/login">Locations</Link>
+
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://about.instagram.com/"
+          >
+            About
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://about.instagram.com/en_US/blog"
+          >
+            Blog
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://about.instagram.com/about-us/careers"
+          >
+            Jobs
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://help.instagram.com/"
+          >
+            Help
+          </a>
+
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/developer/"
+          >
+            API
+          </a>
+
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://help.instagram.com/519522125107875"
+          >
+            Privacy
+          </a>
+
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://help.instagram.com/581066165581870"
+          >
+            Terms
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/directory/profiles/"
+          >
+            Top Accounts
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/directory/hashtags/"
+          >
+            Hashtags
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/explore/locations/"
+          >
+            Locations
+          </a>
+
         </div>
         <div className="footer-second">
           <Link to="/login">Beauty</Link>

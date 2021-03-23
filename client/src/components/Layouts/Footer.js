@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import profile from "../../Images/profile.png";
 
 const Footer = () => {
   return (
@@ -18,12 +19,9 @@ const Footer = () => {
           </svg>
         </Link>
         <Link to="/profile">
-          <img
-            src="https://www.flaticon.com/svg/vstatic/svg/848/848043.svg?token=exp=1611626357~hmac=f5f7d3a4c2aefe76ed3e4fee15d4937a"
-            width="24px"
-            height="24px"
-            alt=""
-          />
+
+          <img src={profile} width="24px" height="24px" alt="profile" />
+
         </Link>
       </div>
     </footer>
