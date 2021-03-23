@@ -100,6 +100,7 @@ const Login = (props) => {
           <div className="get-app">
             <p>Get the app.</p>
             <div>
+
               <a
                 rel="noreferrer"
                 target="_blank"
@@ -120,12 +121,14 @@ const Login = (props) => {
                   alt=""
                 />
               </a>
+
             </div>
           </div>
         </div>
       </div>
       <div id="footer-login">
         <div className="footer-first">
+
           <a
             rel="noreferrer"
             target="_blank"
@@ -199,6 +202,7 @@ const Login = (props) => {
           >
             Locations
           </a>
+
         </div>
         <div className="footer-second">
           <Link to="/login">Beauty</Link>

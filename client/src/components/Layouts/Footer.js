@@ -19,7 +19,9 @@ const Footer = () => {
           </svg>
         </Link>
         <Link to="/profile">
+
           <img src={profile} width="24px" height="24px" alt="profile" />
+
         </Link>
       </div>
     </footer>

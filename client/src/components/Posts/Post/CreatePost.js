@@ -87,7 +87,9 @@ const CreatePost = () => {
               }
             />
           </div>
+
           <button>{loading ? "Loading ..." : "Submit"}</button>
+
         </form>
       </div>
     </div>

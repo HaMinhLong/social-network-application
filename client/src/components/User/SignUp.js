@@ -92,6 +92,7 @@ const SignUp = (props) => {
             </form>
             <div className="something">
               <span>
+
                 By signing up, you agree to our{" "}
                 <a
                   rel="noreferrer"
@@ -117,6 +118,7 @@ const SignUp = (props) => {
                   Cookies Policy
                 </a>{" "}
                 .
+
               </span>
             </div>
           </div>
@@ -127,6 +129,7 @@ const SignUp = (props) => {
           <div className="get-app">
             <p>Get the app.</p>
             <div>
+
               <a
                 rel="noreferrer"
                 target="_blank"
@@ -147,11 +150,13 @@ const SignUp = (props) => {
                   alt=""
                 />
               </a>
+
             </div>
           </div>
         </div>
         <div className="footer-sign-up">
           <div className="footer-sign-up-first">
+
             <a
               rel="noreferrer"
               target="_blank"
@@ -222,6 +227,7 @@ const SignUp = (props) => {
             >
               Locations
             </a>
+
           </div>
           <div className="footer-sign-up-second">
             <span>&copy; 2021 Instagram from Facebook</span>

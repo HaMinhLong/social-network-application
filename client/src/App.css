@@ -14,7 +14,6 @@ body {
   /* box-sizing: border-box; */
   scroll-behavior: smooth;
 }
-
 /* HEADER */
 header {
   /* font-family: "Lobster Two", cursive; */
@@ -107,6 +106,7 @@ header a {
 .post .post-details .content p:nth-child(1) {
   letter-spacing: 2px;
 }
+
 .post .post-details .content p:nth-child(2),
 .post .post-details .content p:nth-child(3) {
   margin-top: 7px;
@@ -116,6 +116,7 @@ header a {
 }
 .comment {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+
   width: 100%;
   height: 50px;
   display: flex;
@@ -123,14 +124,18 @@ header a {
   justify-content: flex-start;
   padding: 5px 20px;
 }
+
 .comment input {
+
   width: 85%;
   background: transparent;
   border: none;
   outline: none;
   font-size: 14px;
 }
+
 .comment button {
+
   width: 10%;
   border: none;
   background: transparent;
@@ -140,7 +145,9 @@ header a {
   cursor: pointer;
   transition: 0.5s;
 }
+
 .comment button:hover {
+
   font-weight: 700;
   font-size: 18px;
 }
@@ -154,7 +161,9 @@ header a {
 }
 #username {
   font-weight: 600;
+
   margin-right: 10px;
+
 }
 #tags {
   color: darkcyan;
@@ -172,6 +181,7 @@ header a {
 .more:hover {
   letter-spacing: 2px;
 }
+
 
 /* SINGLE POST PAGE */
 .single-post-bx {
@@ -325,6 +335,7 @@ header a {
 .inner-border::-webkit-scrollbar {
   display: none;
 }
+
 
 /* ADD NEW POST  */
 .add-new-post {
@@ -548,7 +559,9 @@ header a {
 }
 #footer-login a {
   text-decoration: none;
+
   font-size: 12px;
+
   color: rgba(38, 38, 38, 0.5);
 }
 #footer-login .footer-first,
@@ -556,7 +569,9 @@ header a {
   width: 600px;
   height: 20px;
   display: flex;
+
   flex-wrap: wrap;
+
   justify-content: space-between;
   align-items: center;
 }
@@ -769,7 +784,9 @@ header a {
 #not-select {
   max-height: 1px;
 }
+
 .select-box {
+
   position: absolute;
   top: 30%;
   left: 50%;
@@ -787,16 +804,20 @@ header a {
   border-radius: 10px;
   z-index: 3000;
 }
+
 .select-box p {
+
   color: #000;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
+
 .select-box p:hover:nth-child(1) {
   color: darkcyan;
 }
 .select-box p:hover:nth-child(2) {
+
   color: darkred;
 }
 #bg {
@@ -807,7 +828,9 @@ header a {
   height: 100%;
   background: rgba(38, 38, 38, 1);
   z-index: 2000;
+
   filter: blur(1000px);
+
 }
 
 /* LIKE POST */

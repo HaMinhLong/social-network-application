@@ -14,13 +14,18 @@ import SinglePost from "./components/Posts/Post/SinglePost";
 import { AuthProvider } from "./components/context/auth";
 import AuthRoute from "./components/util/AuthRoute";
 
+import { AuthProvider } from "./components/context/auth";
+import AuthRoute from "./components/util/AuthRoute";
+
 function App() {
   return (
     <div>
       <AuthProvider>
         <Router>
           <AuthRoute path="/" component={Header} />
+
           <AuthRoute exact path="/posts/:postId" component={SinglePost} />
+
           <AuthRoute exact path="/" component={Posts} />
           <AuthRoute exact path="/create-post" component={CreatePost} />
           <AuthRoute exact path="/profile" component={Profile} />
@@ -33,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

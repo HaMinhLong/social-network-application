@@ -25,6 +25,7 @@ export const FETCH_POSTS_QUERY = gql`
   }
 `;
 
+
 export const FETCH_POST_QUERY = gql`
   query($postId: ID!) {
     getPost(postId: $postId) {
@@ -49,6 +50,7 @@ export const FETCH_POST_QUERY = gql`
     }
   }
 `;
+
 
 export const LOGIN_USER = gql`
   mutation login($username: String!, $password: String!) {
@@ -139,8 +141,10 @@ export const LIKE_POST = gql`
   }
 `;
 
+
 export const DELETE_POST = gql`
   mutation deletePost($postId: ID!) {
     deletePost(postId: $postId)
   }
 `;
+
